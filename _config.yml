@@ -1,8 +1,8 @@
 # Site settings
 title: Sreeharsha Bandi
 description: 'Some random stuff related to my research work goes here!'
-url: 'http://bac2binary.github.io'
-baseurl: '/jekyll-uno'
+url: 'http://sreeharshabandi.github.io'
+baseurl: '/'
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 
