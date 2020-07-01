@@ -1,10 +1,9 @@
-</div>
 <h1 class="post-title">About me:</h1>
-</header>
+
 
 <section class="post">
 
-<p>Resourceful and competent Cybersecurity Analyst with hands-on experience in working with windows user mode and kernel mode debugging along with Malware analysis and MITRE ATT&amp;CK Framework. Familiar with PE binaries, Memory dump analysis, Vulnerability assessment and Penetration testing.</p>
+<p> Resourceful and competent Cybersecurity Analyst with hands-on experience in working with windows user mode and kernel mode debugging along with Malware analysis and MITRE ATT&amp;CK Framework. Familiar with PE binaries, Memory dump analysis, Vulnerability assessment and Penetration testing.</p>
 
 <p><strong>Professional Experience:</strong></p>
 <p><strong>Cybersecurity Analyst</strong> (<code class="highlighter-rouge">July 2019</code> to <code class="highlighter-rouge">Present</code>) - <strong>Tata Consultancy Services</strong></p>
@@ -73,9 +72,3 @@ functionality.</p></ol>
 </ol>
 
 </section>
-
-</article>
-
-
-
-  </div>
