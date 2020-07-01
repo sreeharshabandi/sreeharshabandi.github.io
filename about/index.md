@@ -69,7 +69,7 @@
 <header class="panel-cover" style="background-image: url(/jekyll-uno/images/bk1.jpg)">
   <div class="panel-main">
 
-    <div class="panel-main__inner panel-inverted">
+  <div class="panel-main__inner panel-inverted">
     <div class="panel-main__content">
         <a href="/" title="link to home">
           <img src="/jekyll-uno/images/harsha.png" class="user-image" alt="My Profile Photo">
@@ -79,21 +79,21 @@
         <p class="panel-cover__description">Some random stuff related to my research work goes here!</p>
         <hr class="panel-cover__divider panel-cover__divider--secondary">
 
-        <div class="navigation-wrapper">
+   <div class="navigation-wrapper">
 
-          <nav class="cover-navigation cover-navigation--primary">
+   <nav class="cover-navigation cover-navigation--primary">
             <ul class="navigation">
               <li class="navigation__item"><a href="/#blog" title="link to Sreeharsha Bandi blog" class="blog-button">Blog</a></li>
               <li class="navigation__item"><a href="/about/" title="link to Sreeharsha Bandi about" class="blog-button">About</a></li>
             </ul>
           </nav>
 
-          <nav class="cover-navigation navigation--social">
+  <nav class="cover-navigation navigation--social">
             <ul class="navigation">
 
             
-              <!-- Twitter -->
-              <li class="navigation__item">
+   <!-- Twitter -->
+   <li class="navigation__item">
                 <a href="http://twitter.com/0xharsha" title="@0xharsha on Twitter" target="_blank">
                   <i class="icon icon-social-twitter"></i>
                   <span class="label">Twitter</span>
@@ -104,8 +104,8 @@
             
 
             
-              <!-- LinkedIn -->
-              <li class="navigation__item">
+   <!-- LinkedIn -->
+   <li class="navigation__item">
                 <a href="https://www.linkedin.com/in/bandi-sreeharsha" title="bandi-sreeharsha on LinkedIn" target="_blank">
                   <i class="icon icon-social-linkedin"></i>
                   <span class="label">LinkedIn</span>
@@ -114,8 +114,8 @@
             
 
             
-              <!-- GitHub -->
-              <li class="navigation__item">
+   <!-- GitHub -->
+   <li class="navigation__item">
                 <a href="https://www.github.com/0xharsha" title="0xharsha on GitHub" target="_blank">
                   <i class="icon icon-social-github"></i>
                   <span class="label">GitHub</span>
@@ -124,8 +124,8 @@
             
 
             
-              <!-- Email -->
-              <li class="navigation__item">
+   <!-- Email -->
+   <li class="navigation__item">
                 <a href="mailto:sreeharsha.bandi@outlook.com" title="Email sreeharsha.bandi@outlook.com" target="_blank">
                   <i class="icon icon-mail"></i>
                   <span class="label">Email</span>
@@ -133,42 +133,42 @@
               </li>
             
 
-            <!-- RSS -->
-            <li class="navigation__item">
+   <!-- RSS -->
+   <li class="navigation__item">
               <a href="/jekyll-uno/feed.xml" title="Subscribe" target="_blank">
                 <i class="icon icon-rss"></i>
                 <span class="label">RSS</span>
               </a>
             </li>
 
-            </ul>
+   </ul>
           </nav>
 
-        </div>
+   </div>
 
-      </div>
+   </div>
 
-    </div>
+   </div>
 
-    <div class="panel-cover--overlay"></div>
+   <div class="panel-cover--overlay"></div>
   </div>
 </header>
 
 
-    <div class="content-wrapper">
+   <div class="content-wrapper">
       <div class="content-wrapper__inner">
         <article class="post-container post-container--single">
   <header class="post-header">
     <div class="post-meta">
       <time datetime="2020-01-10 00:00" class="post-meta__date date"></time>
       
-    </div>
+   </div>
     <h1 class="post-title">About me:</h1>
   </header>
 
   <section class="post">
 
-    <p>Resourceful and competent Cybersecurity Analyst with hands-on experience in working with windows user mode and kernel mode debugging along with Malware analysis and MITRE ATT&amp;CK Framework. Familiar with PE binaries, Memory dump analysis, Vulnerability assessment and Penetration testing.</p>
+   <p>Resourceful and competent Cybersecurity Analyst with hands-on experience in working with windows user mode and kernel mode debugging along with Malware analysis and MITRE ATT&amp;CK Framework. Familiar with PE binaries, Memory dump analysis, Vulnerability assessment and Penetration testing.</p>
 
 <p><strong>Professional Experience:</strong></p>
 <p><strong>Cybersecurity Analyst</strong> (<code class="highlighter-rouge">July 2019</code> to <code class="highlighter-rouge">Present</code>) - <strong>Tata Consultancy Services</strong></p>
@@ -242,9 +242,9 @@
 
 
 
-      </div>
+   </div>
 
-      <footer class="footer">
+   <footer class="footer">
   <span class="footer__copyright">&copy; 2020 Sreeharsha Bandi. All rights reserved.</span>
 </footer>
 
@@ -252,6 +252,6 @@
 <script type="text/javascript" src="/jekyll-uno/js/main.js?1593585410921039000"></script>
 
 
-    </div>
+   </div>
   </body>
 </html>
