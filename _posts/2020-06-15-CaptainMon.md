@@ -1,11 +1,11 @@
 ---
-title:  "CaptainMon! - Process Spwaning tool"
+title:  "CaptainMon! - Process Spawning tool"
 date:   2020-06-15 19:14:18
 categories: [Windows_WMI]
-tags: [Process_Spwaning, WMI]
+tags: [Process_Spawning, WMI]
 ---
 
-In this post we will be looking at my recent develpment on <strong>Windows Process Spwaning using [CaptainMon][linktocaptainmon].</strong>
+In this post we will be looking at my recent develpment on <strong>Windows Process Spawning using [CaptainMon][linktocaptainmon].</strong>
 
 <strong>Prior knowledge on the following topics are required:</strong>
 1. <code class="highlighter-rouge">Windows Management Instumentation.</code>
@@ -71,7 +71,7 @@ $query = New-Object System.Management.WQLEventQuery("__InstanceCreationEvent",$n
 $watcher = New-Object System.Management.ManagementEventWatcher($scope,$query);
 ```
 
-<p>Now Spwaning the new processes repetedly by incrementing the counter and using a Sychronous call for the watcher:</p>
+<p>Now Spawning the new processes repetedly by incrementing the counter and using a Sychronous call for the watcher:</p>
 
 ```c#
 $scope = New-Object System.Management.ManagementScope("\DESKTOPJ3BH2\.\root\cimV2");
@@ -85,7 +85,7 @@ do
 }
 while($true)
 ```
-<p>Now spwaning the newly arrived event:</p>
+<p>Now Spawning the newly arrived event:</p>
 
 ```c#
 $NEvent = $watcher.WaitForNextEvent();
@@ -113,7 +113,7 @@ function Sp($processID) {
 	if(($pProc -ne [IntPtr]::Zero){
 		Write-Host "Trying to suspend process: $processID"
 
-		$result = SuspendProcess($pProc)
+		$result = Sp($pProc)
 		if($result -ne 0) {
 			Write-Error "Failed to suspend. SuspendProcess returned: $result"
 			return $False
@@ -140,7 +140,7 @@ function Rp($processID) {
 	if(($pProc -ne [IntPtr]::Zero){
 		Write-Host "Trying to resume process: $processID"
 		Write-Host ""
-		$result = ResumeProcess($pProc)
+		$result = Rp($pProc)
 		if($result -ne 0) {
 			Write-Error "Failed to resume. ResumeProcess returned: $result"
 		}
