@@ -55,14 +55,15 @@ ManagementScope(ManagementPath): This initializes a new instance of the Manageme
 ```c#
 $scope = New-Object System.Management.ManagementScope("\DESKTOPJ3BH2\.\root\cimV2");
 ```
+
 <p>Implemention of the same in c#:</P>
 
 ```C#
 ManagementScope scope =
             new ManagementScope(
             "\\\\FullComputerName\\root\\cimv2");
-        scope.Connect();
 ```
+
 <p>Summing up the Object implementation together by including the Culture in Powershell:</P>
 
 ```c#
