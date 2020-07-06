@@ -23,7 +23,7 @@ if(fail to have the above required knowledge)
 
 <p>Windows Management Instrumentation (WMI) is the infrastructure for management data and operations on Windows-based operating systems. You can use WMI from client applications and scripts. It provides an infrastructure that makes it easy to both discover and perform management tasks. In addition, you can add to the set of possible management tasks by creating your own WMI providers.</P>
 
-<p><strong>WQLEventQuery:</p></strong>
+<p><strong>WQLEventQuery:</strong></p>
 
 <p>Represents a WMI event query in WQL format. Following Constructor related to WQLEventQuery is used in CaptainMon.</P>
 
@@ -44,7 +44,7 @@ WqlEventQuery query =
 ```
 Note: WMI-query in-c# does not work on non-english machine.
 
-<p><strong>ManagementScope:<p><strong>
+<p><strong>ManagementScope:</p><strong>
 
 <p>Represents a scope (namespace) for management operations. Used to make a connection to a remote computer, following Constructor related to ManagementScope is used in CaptainMon.</p>
 
