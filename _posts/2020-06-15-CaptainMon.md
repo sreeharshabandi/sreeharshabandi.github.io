@@ -44,7 +44,7 @@ WqlEventQuery query =
 ```
 Note: WMI-query in-c# does not work on non-english machine.
 
-<p><strong>ManagementScope:<strong></p>
+<p><strong>ManagementScope:</strong></p>
 
 <p>Represents a scope (namespace) for management operations. Used to make a connection to a remote computer, following Constructor related to ManagementScope is used in CaptainMon.</p>
 
@@ -55,7 +55,7 @@ ManagementScope(ManagementPath): This initializes a new instance of the Manageme
 ```c#
 $scope = New-Object System.Management.ManagementScope("\DESKTOPJ3BH2\.\root\cimV2");
 ```
-Implemention of the same in c#:
+<p>Implemention of the same in c#:</P>
 
 ```C#
 ManagementScope scope =
