@@ -5,9 +5,9 @@ categories: [Windows_WMI]
 tags: [Process_Spwaning, WMI]
 ---
 
-In this post we will be looking at my recent develpment on Windows Process Spwaning using CaptainMon.
+In this post we will be looking at my recent develpment on <strong>Windows Process Spwaning using [CaptainMon][linktocaptainmon].</strong>
 
-Prior knowledge on the following topics are required:
+<strong>Prior knowledge on the following topics are required:</strong>
 1. Windows Management Instumentation.
 2. WQLEventQuery.
 3. ManagementScope.
@@ -19,17 +19,17 @@ if(fail to have the above required knowledge)
 }
 ```
 
-Windows Management Instrumentation:
+<p><strong>Windows Management Instrumentation:</strong></p>
 
-Windows Management Instrumentation (WMI) is the infrastructure for management data and operations on Windows-based operating systems. You can use WMI from client applications and scripts. It provides an infrastructure that makes it easy to both discover and perform management tasks. In addition, you can add to the set of possible management tasks by creating your own WMI providers.
+<p>Windows Management Instrumentation (WMI) is the infrastructure for management data and operations on Windows-based operating systems. You can use WMI from client applications and scripts. It provides an infrastructure that makes it easy to both discover and perform management tasks. In addition, you can add to the set of possible management tasks by creating your own WMI providers.</P>
 
-WQLEventQuery:
+<p><strong>WQLEventQuery:</p></strong>
 
-Represents a WMI event query in WQL format. Following Constructor related to WQLEventQuery is used in CaptainMon.
+<p>Represents a WMI event query in WQL format. Following Constructor related to WQLEventQuery is used in CaptainMon.</P>
 
 WqlEventQuery(String, String, TimeSpan): This initializes a new instance of the WqlEventQuery class with the specified event class name, condition, and grouping interval.
 
-Following implementation is made in CaptainMon for defining an Event Query object in powershell:
+<p>Following implementation is made in CaptainMon for defining an Event Query object in powershell:</P>
 
 ```c#
 $query = New-Object System.Management.WQLEventQuery("__InstanceCreationEvent",$new_process_check_interval,"TargetInstance ISA 'Win32_Process'" );
@@ -44,13 +44,13 @@ WqlEventQuery query =
 ```
 Note: WMI-query in-c# does not work on non-english machine.
 
-ManagementScope:
+<p><strong>ManagementScope:<p><strong>
 
-Represents a scope (namespace) for management operations. Used to make a connection to a remote computer, following Constructor related to ManagementScope is used in CaptainMon.
+<p>Represents a scope (namespace) for management operations. Used to make a connection to a remote computer, following Constructor related to ManagementScope is used in CaptainMon.</p>
 
 ManagementScope(ManagementPath): This initializes a new instance of the ManagementScope class representing the specified scope path.
 
-Implemention of ManagementScope() object in CaptainMon:
+<p>Implemention of ManagementScope() object in CaptainMon:</P>
 
 ```c#
 $scope = New-Object System.Management.ManagementScope("\DESKTOPJ3BH2\.\root\cimV2");
@@ -63,7 +63,7 @@ ManagementScope scope =
             "\\\\FullComputerName\\root\\cimv2");
         scope.Connect();
 ```
-Summing up the Object implementation together by including the Culture in Powershell:
+<p>Summing up the Object implementation together by including the Culture in Powershell:</P>
 
 ```c#
 $scope = New-Object System.Management.ManagementScope("\DESKTOPJ3BH2\.\root\cimV2");
@@ -71,7 +71,7 @@ $query = New-Object System.Management.WQLEventQuery("__InstanceCreationEvent",$n
 $watcher = New-Object System.Management.ManagementEventWatcher($scope,$query);
 ```
 
-Now Spwaning the new processes repetedly by incrementing the counter and using a Sychronous call for the watcher:
+<p>Now Spwaning the new processes repetedly by incrementing the counter and using a Sychronous call for the watcher:</p>
 
 ```c#
 $scope = New-Object System.Management.ManagementScope("\DESKTOPJ3BH2\.\root\cimV2");
@@ -85,14 +85,14 @@ do
 }
 while($true)
 ```
-Now spwaning the newly arrived event:
+<p>Now spwaning the newly arrived event:</p>
 
 ```c#
 $NEvent = $watcher.WaitForNextEvent();
 $Ti = $newlyArrivedEvent.TargetInstance;
 $processName=[string]$Ti.Name;
 ```
-Writing Parent_Process to the host:
+<p>Writing Parent_Process to the host:</p>
 
 ```c#
 $parent_process=''; 
@@ -106,7 +106,7 @@ $parent_process='';
 		$parent_process='Unknown';
 	}
 ```
-Suspending the Process:
+<p><strong>Suspending the Process:</strong></p>
 
 ```c#
 function Sp($processID) {
@@ -133,7 +133,7 @@ if (-not ($ignoredProcesses -match $processName))
 		}
 	}
 ```
-Resuming the Process:
+<p><strong>Resuming the Process:</p></strong>
 
 ```c#
 function Rp($processID) {
@@ -151,10 +151,11 @@ function Rp($processID) {
 }
 ```
 
-Finally writing the output to the host:
+<p>Finally writing the output to the host:</p>
+
 ```c#
 Write-host "";
 	$Ti.processName, $Ti.ProcessId, $Ti.ParentProcessID, $parent_process | Out-File - FilePath .\Output.json
 ```
 
-Thanks For Reading
+<p><strong>Thanks For Reading</p></strong>
