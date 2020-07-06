@@ -12,7 +12,7 @@ Prior knowledge on the following topics are required:
 2. WQLEventQuery.
 3. ManagementScope.
 
-```ps1
+```c#
 if(fail to have the above required knowledge)
 {
     Write-host "Don't worry, you can learn that in this post:";
@@ -31,7 +31,7 @@ WqlEventQuery(String, String, TimeSpan): This initializes a new instance of the 
 
 Following implementation is made in CaptainMon for defining an Event Query object in powershell:
 
-```ps1
+```c#
 $query = New-Object System.Management.WQLEventQuery("__InstanceCreationEvent",$new_process_check_interval,"TargetInstance ISA 'Win32_Process'" );
 ```
 Implementation of the same in c# is shown below:
@@ -52,7 +52,7 @@ ManagementScope(ManagementPath): This initializes a new instance of the Manageme
 
 Implemention of ManagementScope() object in CaptainMon:
 
-```ps1
+```c#
 $scope = New-Object System.Management.ManagementScope("\DESKTOPJ3BH2\.\root\cimV2");
 ```
 Implemention of the same in c#:
@@ -65,7 +65,7 @@ ManagementScope scope =
 ```
 Summing up the Object implementation together by including the Culture in Powershell:
 
-```ps1
+```c#
 $scope = New-Object System.Management.ManagementScope("\DESKTOPJ3BH2\.\root\cimV2");
 $query = New-Object System.Management.WQLEventQuery("__InstanceCreationEvent",$new_process_check_interval,"TargetInstance ISA 'Win32_Process'" );
 $watcher = New-Object System.Management.ManagementEventWatcher($scope,$query);
@@ -73,7 +73,7 @@ $watcher = New-Object System.Management.ManagementEventWatcher($scope,$query);
 
 Now Spwaning the new processes repetedly by incrementing the counter and using a Sychronous call for the watcher:
 
-```ps1
+```c#
 $scope = New-Object System.Management.ManagementScope("\DESKTOPJ3BH2\.\root\cimV2");
 $query = New-Object System.Management.WQLEventQuery("__InstanceCreationEvent",$new_process_check_interval,"TargetInstance ISA 'Win32_Process'" );
 $watcher = New-Object System.Management.ManagementEventWatcher($scope,$query);
@@ -87,14 +87,14 @@ while($true)
 ```
 Now spwaning the newly arrived event:
 
-```ps1
+```c#
 $NEvent = $watcher.WaitForNextEvent();
 $Ti = $newlyArrivedEvent.TargetInstance;
 $processName=[string]$Ti.Name;
 ```
 Writing Parent_Process to the host:
 
-```ps1
+```c#
 $parent_process=''; 
 	try 
 	{
@@ -108,7 +108,7 @@ $parent_process='';
 ```
 Suspending the Process:
 
-```ps1
+```c#
 function Sp($processID) {
 	if(($pProc -ne [IntPtr]::Zero){
 		Write-Host "Trying to suspend process: $processID"
@@ -135,7 +135,7 @@ if (-not ($ignoredProcesses -match $processName))
 ```
 Resuming the Process:
 
-```ps1
+```c#
 function Rp($processID) {
 	if(($pProc -ne [IntPtr]::Zero){
 		Write-Host "Trying to resume process: $processID"
@@ -152,7 +152,7 @@ function Rp($processID) {
 ```
 
 Finally writing the output to the host:
-```ps1
+```c#
 Write-host "";
 	$Ti.processName, $Ti.ProcessId, $Ti.ParentProcessID, $parent_process | Out-File - FilePath .\Output.json
 ```
