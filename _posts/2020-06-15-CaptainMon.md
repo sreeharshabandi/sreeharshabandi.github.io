@@ -44,7 +44,7 @@ WqlEventQuery query =
 ```
 Note: WMI-query in-c# does not work on non-english machine.
 
-<p><strong>ManagementScope:</p><strong>
+<p><strong>ManagementScope:<strong></p>
 
 <p>Represents a scope (namespace) for management operations. Used to make a connection to a remote computer, following Constructor related to ManagementScope is used in CaptainMon.</p>
 
@@ -133,7 +133,7 @@ if (-not ($ignoredProcesses -match $processName))
 		}
 	}
 ```
-<p><strong>Resuming the Process:</p></strong>
+<p><strong>Resuming the Process:</strong></p>
 
 ```c#
 function Rp($processID) {
@@ -158,4 +158,4 @@ Write-host "";
 	$Ti.processName, $Ti.ProcessId, $Ti.ParentProcessID, $parent_process | Out-File - FilePath .\Output.json
 ```
 
-<p><strong>Thanks For Reading</p></strong>
+<p><strong>Thanks For Reading</strong></p>
