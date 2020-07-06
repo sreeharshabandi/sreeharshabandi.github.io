@@ -7,7 +7,7 @@
 
 <p><strong>Professional Experience:</strong></p>
 <p><strong>Cybersecurity Analyst</strong> (<code class="highlighter-rouge">July 2019</code> to <code class="highlighter-rouge">Present</code>) - <strong>Tata Consultancy Services</strong></p>
-<p><strong>My Responsibilities as a Cybersecurity Analyst:</strong></p>
+<p><strong>My Responsibilities as a Cybersecurity Analyst - CSIRT:</strong></p>
 <ol><p><strong>•</strong> To analyze latest malware and writing the YARA rules to detect them.</p></ol>
 <ol><p><strong>•</strong> Helping Organization to recover from Malware Attacks.</p></ol>
 <ol><p><strong>•</strong> Finding the Root cause of the Malware incidents.</p></ol>
