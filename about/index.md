@@ -63,6 +63,7 @@ functionality.</p></ol>
 <p><strong>Projects</strong></p>
 
 <ol>
+<li><code class="highlighter-rouge">Captain - The kernel Tool.</code>.</li>
 <li><code class="highlighter-rouge">Automatic Licence verification and convict detection at tollgate.</code>.</li>
 <li><code class="highlighter-rouge">Human detection robot</code>.</li>
 <li><code class="highlighter-rouge">Intrusion detection system</code>.</li>
