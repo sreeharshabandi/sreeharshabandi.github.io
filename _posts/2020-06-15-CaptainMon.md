@@ -8,9 +8,9 @@ tags: [Process_Spwaning, WMI]
 In this post we will be looking at my recent develpment on <strong>Windows Process Spwaning using [CaptainMon][linktocaptainmon].</strong>
 
 <strong>Prior knowledge on the following topics are required:</strong>
-1. Windows Management Instumentation.
-2. WQLEventQuery.
-3. ManagementScope.
+1. <code class="highlighter-rouge">Windows Management Instumentation.</code>
+2. <code class="highlighter-rouge">WQLEventQuery.</code>
+3. <code class="highlighter-rouge">ManagementScope.</code>
 
 ```c#
 if(fail to have the above required knowledge)
@@ -19,15 +19,15 @@ if(fail to have the above required knowledge)
 }
 ```
 
-<p><strong>Windows Management Instrumentation:</strong></p>
+<p><strong><code class="highlighter-rouge">Windows Management Instrumentation:</code></strong></p>
 
 <p>Windows Management Instrumentation (WMI) is the infrastructure for management data and operations on Windows-based operating systems. You can use WMI from client applications and scripts. It provides an infrastructure that makes it easy to both discover and perform management tasks. In addition, you can add to the set of possible management tasks by creating your own WMI providers.</P>
 
-<p><strong>WQLEventQuery:</strong></p>
+<p><strong><code class="highlighter-rouge">WQLEventQuery:</code></strong></p>
 
 <p>Represents a WMI event query in WQL format. Following Constructor related to WQLEventQuery is used in CaptainMon.</P>
 
-WqlEventQuery(String, String, TimeSpan): This initializes a new instance of the WqlEventQuery class with the specified event class name, condition, and grouping interval.
+<code class="highlighter-rouge">WqlEventQuery(String, String, TimeSpan):</code> This initializes a new instance of the WqlEventQuery class with the specified event class name, condition, and grouping interval.
 
 <p>Following implementation is made in CaptainMon for defining an Event Query object in powershell:</P>
 
@@ -44,11 +44,11 @@ WqlEventQuery query =
 ```
 Note: WMI-query in-c# does not work on non-english machine.
 
-<p><strong>ManagementScope:</strong></p>
+<p><strong><code class="highlighter-rouge">ManagementScope:</code></strong></p>
 
 <p>Represents a scope (namespace) for management operations. Used to make a connection to a remote computer, following Constructor related to ManagementScope is used in CaptainMon.</p>
 
-ManagementScope(ManagementPath): This initializes a new instance of the ManagementScope class representing the specified scope path.
+<code class="highlighter-rouge">ManagementScope(ManagementPath):</code> This initializes a new instance of the ManagementScope class representing the specified scope path.
 
 <p>Implemention of ManagementScope() object in CaptainMon:</P>
 
@@ -56,7 +56,7 @@ ManagementScope(ManagementPath): This initializes a new instance of the Manageme
 $scope = New-Object System.Management.ManagementScope("\DESKTOPJ3BH2\.\root\cimV2");
 ```
 
-<p>Implemention of the same in c#:</P>
+Implementation of the same in c# is shown below:
 
 ```C#
 ManagementScope scope =
