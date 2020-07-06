@@ -89,7 +89,7 @@ while($true)
 
 ```c#
 $NEvent = $watcher.WaitForNextEvent();
-$Ti = $newlyArrivedEvent.TargetInstance;
+$Ti = $NEvent.TargetInstance;
 $processName=[string]$Ti.Name;
 ```
 <p>Writing Parent_Process to the host:</p>
@@ -160,4 +160,4 @@ Write-host "";
 
 <p><strong>Thanks For Reading!</strong></p>
 
-[linktocaptainmon]: https://google.com
+[linktocaptainmon]: https://github.com/sreeharshabandi/CaptainMon
