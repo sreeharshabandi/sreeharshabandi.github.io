@@ -23,6 +23,8 @@ if(fail to have the above required knowledge)
 
 <p>Windows Management Instrumentation (WMI) is the infrastructure for management data and operations on Windows-based operating systems. You can use WMI from client applications and scripts. It provides an infrastructure that makes it easy to both discover and perform management tasks. In addition, you can add to the set of possible management tasks by creating your own WMI providers.</P>
 
+![alt text](https://github.com/sreeharshabandi/sreeharshabandi.github.io/blob/master/images/posts_images/wmi.jpg?raw=true)
+
 <p><strong><code class="highlighter-rouge">WQLEventQuery:</code></strong></p>
 
 <p>Represents a WMI event query in WQL format. Following Constructor related to WQLEventQuery is used in CaptainMon.</P>
@@ -37,10 +39,7 @@ $query = New-Object System.Management.WQLEventQuery("__InstanceCreationEvent",$n
 Implementation of the same in c# is shown below:
 
 ```c#
-WqlEventQuery query =
-            new WqlEventQuery("__InstanceCreationEvent",
-            new TimeSpan(0,0,1),
-            "TargetInstance isa \"Win32_Process\"");
+WqlEventQuery query = new WqlEventQuery("__InstanceCreationEvent", new TimeSpan(0,0,1), "TargetInstance isa \"Win32_Process\"");
 ```
 Note: WMI-query in-c# does not work on non-english machine.
 
@@ -107,7 +106,7 @@ $parent_process='';
 		$parent_process='Unknown';
 	}
 ```
-<p><strong>Suspending the Process:</strong></p>
+<p><strong><code class="highlighter-rouge">Suspending the Process:</code></strong></p>
 
 ```c#
 function Sp($processID) {
@@ -134,7 +133,7 @@ if (-not ($ignoredProcesses -match $processName))
 		}
 	}
 ```
-<p><strong>Resuming the Process:</strong></p>
+<p><strong><code class="highlighter-rouge">Resuming the Process:</code></strong></p>
 
 ```c#
 function Rp($processID) {
@@ -160,3 +159,5 @@ Write-host "";
 ```
 
 <p><strong>Thanks For Reading!</strong></p>
+
+[linktocaptainmon]: https://google.com
