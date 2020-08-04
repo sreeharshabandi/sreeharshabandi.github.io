@@ -3,10 +3,10 @@
 
 <section class="post">
 
-<p> Resourceful and competent Incident Responce Analyst with hands-on experience in working with windows user mode and kernel mode debugging along with Malware analysis and MITRE ATT&amp;CK Framework. Familiar with PE binaries, Memory dump analysis, Vulnerability assessment and Penetration testing.</p>
+<p> Resourceful and competent Incident Response Analyst with hands-on experience in dealing with computer security incidents, Forensic investigations, windows user mode and kernel mode debugging along with Malware analysis and MITRE ATT&amp;CK Framework. Familiar with PE binaries, Memory dump analysis, Vulnerability assessment and Penetration testing.</p>
 
 <p><strong>Professional Experience:</strong></p>
-<p><strong>Incident Responce Analyst</strong> (<code class="highlighter-rouge">July 2019</code> to <code class="highlighter-rouge">Present</code>) - <strong>Tata Consultancy Services</strong></p>
+<p><strong>Incident Response Analyst</strong> (<code class="highlighter-rouge">July 2019</code> to <code class="highlighter-rouge">Present</code>) - <strong>Tata Consultancy Services</strong></p>
 <p><strong>My Responsibilities as a Incident Responder:</strong></p>
 <ol><p><strong>•</strong> To analyze latest malware and writing the YARA rules to detect them.</p></ol>
 <ol><p><strong>•</strong> Helping Organization to recover from Malware Attacks.</p></ol>
